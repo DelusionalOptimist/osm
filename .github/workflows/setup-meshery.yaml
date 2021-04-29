@@ -7,9 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - uses: engineerd/setup-kind@v0.5.0
-      - uses: DelusionalOptimist/setup-meshery-demo@main
-        with:
-          milliseconds: 1000
+      - uses: Azure/setup-helm@v1
+      - uses: DelusionalOptimist/setup-meshery@main
       - name: Testing
         run: |
           kubectl cluster-info
